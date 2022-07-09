@@ -2,12 +2,7 @@ package ru.job4j.condition;
 
 public class Point {
     public static double distance(int x1, int y1, int x2, int y2) {
-        double firstOperand = x1 - x2;
-        double secondOperand = y1 - y2;
-        double firstNumPow = Math.pow(firstOperand, 2);
-        double secondNumPow = Math.pow(secondOperand, 2);
-        double firstPlusSecond = firstNumPow + secondNumPow;
-        double rsl = Math.sqrt(firstPlusSecond);
+       double rsl = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
         return rsl;
     }
 
