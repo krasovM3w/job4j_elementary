@@ -5,11 +5,7 @@ import com.sun.source.doctree.SummaryTree;
 public class TrgArea {
     public static double area(double a, double b, double c) {
         double p = (a + b + c) / 2;
-        double first = p - a;
-        double second = p - b;
-        double third = p - c;
-        double preResult = p * first * second * third;
-        double rsl = Math.sqrt(preResult);
+        double rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         return rsl;
     }
 
